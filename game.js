@@ -410,3 +410,17 @@ var Game = (function() {
 window.onload = function(){
     Game.start();
 };
+document.onkeyup = function(e) {
+  if (e.which == 77) {
+    let m = prompt(material, metal);
+    let a = prompt(amount, 0);
+    Game.resources.getResource(m=a)
+  } else if (e.ctrlKey && e.which == 66) {
+    var newShimmer=new
+    Game.shimmer("golden");
+  } else if (e.ctrlKey && e.altKey && e.which == 89) {
+    Game.Earn(1000000000000);
+  } else if (e.altKey && e.which == 85) {
+    Game.Earn(100000);
+  }
+};
